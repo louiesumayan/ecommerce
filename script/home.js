@@ -1,5 +1,5 @@
 import { products } from '../data/products.js';
-
+import { cart } from '../data/Cart.js';
 let productHTML = '';
 
 products.forEach((item) => {
@@ -17,3 +17,27 @@ products.forEach((item) => {
   `;
 });
 document.querySelector('.card-item-container').innerHTML = productHTML;
+
+document.querySelectorAll('.addToCart').forEach((btnCartItem) => {
+  btnCartItem.addEventListener('click', () => {
+    const productId = btnCartItem.dataset.productId;
+
+    let matchingItem;
+
+    cart.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+    } else {
+      cart.push({
+        productId: productId,
+        quantity: 1,
+      });
+    }
+
+    console.log(cart);
+  });
+});
