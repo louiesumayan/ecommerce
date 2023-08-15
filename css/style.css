@@ -120,7 +120,7 @@ footer {
 
 @media screen and (max-width: 560px) {
   input[type='search'] {
-    width: 100px;
+    width: 180px;
   }
   .menu_container .logo {
     font-size: 1rem;
@@ -140,5 +140,8 @@ footer {
   }
   .card {
     width: 100%;
+  }
+  .menu_container h1 {
+    display: none;
   }
 }

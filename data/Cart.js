@@ -1,4 +1,17 @@
-export const cart = [];
+export const cart = [
+  {
+    productId: '172fdvjk1321kjvasdv123',
+    quantity: 2,
+  },
+  {
+    productId: '132fdvjk1321kjvasdv123',
+    quantity: 1,
+  },
+  {
+    productId: '152fdvjk1321kjvasdv123',
+    quantity: 5,
+  },
+];
 
 export function addToCart(productId) {
   let matchingItem;

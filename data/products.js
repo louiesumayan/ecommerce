@@ -2,7 +2,7 @@ export const products = [
   {
     id: '1ansciof4231hfds31asdj321',
     image: 'images/IMG_1.jpg',
-    product_title: 'Queen & Kingz - Long live arts',
+    product_title: 'PRODUCT 1',
     price: 5000,
   },
   {
@@ -75,30 +75,30 @@ export const products = [
     id: '132fdvjk1321kjvasdv123',
     image: 'images/IMG_13.jpg',
     product_title: 'PRODUCT 13',
-    price: 251000,
+    price: 2351000,
   },
   {
     id: '142fdvjk1321kjvasdv123',
     image: 'images/IMG_14.jpg',
     product_title: 'PRODUCT 14',
-    price: 251000,
+    price: 1251000,
   },
   {
     id: '152fdvjk1321kjvasdv123',
     image: 'images/IMG_15.jpg',
     product_title: 'PRODUCT 15',
-    price: 251000,
+    price: 52251000,
   },
   {
     id: '162fdvjk1321kjvasdv123',
     image: 'images/IMG_16.jpg',
     product_title: 'PRODUCT 16',
-    price: 251000,
+    price: 51251000,
   },
   {
     id: '172fdvjk1321kjvasdv123',
     image: 'images/IMG_17.jpg',
     product_title: 'PRODUCT 17',
-    price: 251000,
+    price: 514251000,
   },
 ];

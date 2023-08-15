@@ -130,6 +130,12 @@ input[type='search'] {
   font-size: 1rem;
 }
 
+.delivery-option {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -169,8 +175,5 @@ footer {
   }
   .menu_container h1 {
     display: none;
-  }
-  .cart {
-    margin-left: 10px !important;
   }
 }
