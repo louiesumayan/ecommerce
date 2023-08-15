@@ -74,43 +74,62 @@ input[type='search'] {
   cursor: pointer;
 }
 
-.card {
-  margin-bottom: 15px;
-  transition: all 0.4s ease-in-out;
+.checkout-details {
+  border: 1px solid #3333333b;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.checkout-details h1 {
+  text-align: center;
+  font-size: 2.789rem;
 }
 
-.cart {
-  text-decoration: none;
+.order-summary-details {
+  display: flex;
+  max-width: 520px;
+  justify-content: space-between;
+  margin: 10px auto;
 }
-
-.card:hover {
-  cursor: pointer;
-  transform: scale(0.9);
-  border: 1px solid black;
-  padding: 5px;
+.order-summary {
+  text-align: center;
 }
-.card .image-details button {
+.order-summary button {
+  background-color: rgb(66, 235, 66);
+  color: #000;
+  font-weight: bolder;
+  padding: 10px 2.892rem;
   cursor: pointer;
-  width: 100%;
   border: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-  background-color: #e76e56;
-  color: #fff;
-  transition: all 0.5s ease;
 }
 
-.card .image-details button:hover {
-  background-color: #fd2e04;
-  color: #fff;
+.order-summary button:hover {
+  background-color: rgb(149, 248, 149);
+  color: #000000;
 }
 
-.card-item-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  align-content: center;
+.item-checkout {
+  border: 1px solid #33333337;
+  border-radius: 20px;
+  padding: 25px;
 }
+
+.item-to-checkout-dets {
+  display: flex;
+  padding: 20px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.item-checkout {
+  margin-bottom: 20px;
+}
+
+.item-checkout h1,
+.checkout-details h1 {
+  font-size: 1rem;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -120,7 +139,7 @@ footer {
 
 @media screen and (max-width: 560px) {
   input[type='search'] {
-    width: 100px;
+    width: 180px;
   }
   .menu_container .logo {
     font-size: 1rem;
@@ -140,5 +159,18 @@ footer {
   }
   .card {
     width: 100%;
+  }
+  .item-to-checkout-dets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  .menu_container h1 {
+    display: none;
+  }
+  .cart {
+    margin-left: 10px !important;
   }
 }
