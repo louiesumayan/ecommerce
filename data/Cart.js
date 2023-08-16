@@ -1,18 +1,9 @@
 import { products } from './products.js';
-export let cart = [
-  {
-    productId: '172fdvjk1321kjvasdv123',
-    quantity: 2,
-  },
-  {
-    productId: '132fdvjk1321kjvasdv123',
-    quantity: 1,
-  },
-  {
-    productId: '152fdvjk1321kjvasdv123',
-    quantity: 5,
-  },
-];
+export let cart = JSON.parse(localStorage.getItem('cartItem'));
+
+if (!cart) {
+  cart = [];
+}
 
 export function addToCart(productId) {
   let matchingItem;
@@ -29,6 +20,8 @@ export function addToCart(productId) {
       quantity: 1,
     });
   }
+
+  saveToStorage();
 }
 
 export function removeItemFromCart(productId) {
@@ -41,6 +34,7 @@ export function removeItemFromCart(productId) {
   });
 
   cart = newCart;
+  saveToStorage();
 }
 
 export function cartQuantity() {
@@ -70,4 +64,11 @@ export function itemInCartQuantity() {
   });
   document.querySelector('.itemInCart').textContent = cartQuantity;
   document.querySelector('.price').textContent = price;
+  saveToStorage();
 }
+
+export function saveToStorage() {
+  localStorage.setItem('cartItem', JSON.stringify(cart));
+}
+
+// fix the cart quantity not reflicting when clicking the delete function, also the same with item(4) in order and price

@@ -1,4 +1,10 @@
-import { cart, removeItemFromCart, itemInCartQuantity } from '../data/Cart.js';
+import {
+  cart,
+  removeItemFromCart,
+  itemInCartQuantity,
+  cartQuantity,
+  saveToStorage,
+} from '../data/Cart.js';
 import { products } from '../data/products.js';
 
 let cartItemHTML = '';
@@ -87,7 +93,9 @@ document.querySelectorAll('.btn-delete').forEach((btn) => {
     const container = document.querySelector(`.item-container-${productId}`);
 
     container.remove();
+    saveToStorage();
   });
 });
 
 itemInCartQuantity();
+cartQuantity();

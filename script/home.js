@@ -28,3 +28,5 @@ document.querySelectorAll('.addToCart').forEach((btnCartItem) => {
     console.log(cart);
   });
 });
+
+cartQuantity();
