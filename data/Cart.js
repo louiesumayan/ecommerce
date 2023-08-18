@@ -72,3 +72,5 @@ export function saveToStorage() {
 }
 
 // fix the cart quantity not reflicting when clicking the delete function, also the same with item(4) in order and price
+
+//fix the pricprice not calculated properly

@@ -1,5 +1,6 @@
 import { products } from '../data/products.js';
 import { cart, addToCart, cartQuantity } from '../data/Cart.js';
+
 let productHTML = '';
 
 products.forEach((item) => {
@@ -9,7 +10,7 @@ products.forEach((item) => {
             <img src="${item.image}" alt="${item.product_title}" width="250px" height="250px" />
           </div>
           <div class="image-details">
-            <p class="name">${item.product_title}.</p>
+            <p class="name">${item.product_title}</p>
             <p>price: <span class="price">$${item.price}</span></p>
             <button class="addToCart" data-product-id='${item.id}'>Add to cart</button>
           </div>
